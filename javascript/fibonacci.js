@@ -1,5 +1,13 @@
 function fibonacci(num) {
   // type your code here
+  if (num<2) return num
+  
+  let found= [0,1]
+  for (let i=0; i<num-1; ++i){
+    let sum = found[0]+found[1]
+    found =[found[1], sum]
+  }
+  return found[1]
 }
 
 if (require.main === module) {
